@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import axios from "axios";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const App = () => {
   const [transcript, setTranscript] = useState("");
   const [corrected, setCorrected] = useState("");
@@ -53,7 +55,7 @@ const App = () => {
 
   const getCorrection = async (text) => {
     try {
-      const res = await axios.post("http://localhost:5000/api/correct", {
+      const res = await axios.post(`${API_URL}/correct`, {
         text,
       });
       const correctedText = res.data.corrected;
