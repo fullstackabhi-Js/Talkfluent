@@ -7,7 +7,7 @@ require('dotenv').config();
 const app = express();
 const port = 5000;
 
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: ['http://localhost:3000', 'https://talkfluent.tutorazzi.com'] }));
 app.use(express.json());
 
 const openai = new OpenAI({
