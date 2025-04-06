@@ -111,6 +111,15 @@ const App = () => {
               </button>
             </h3>
             <p className="text-green-900 bg-green-50 rounded p-2">{corrected}</p>
+
+            <div className="flex justify-center mt-2">
+              <button
+                onClick={() => speak(corrected)}
+                className={`px-6 py-3 align-center mt-2 text-white font-semibold rounded-xl transition bg-indigo-600 hover:bg-indigo-700`}
+              >
+                Speak Corrected Text
+              </button>
+            </div>
           </div>
         )}
       </div>
