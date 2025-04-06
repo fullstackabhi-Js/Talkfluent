@@ -1,41 +1,55 @@
 # 🗣️ TalkFluent
 
-> **TalkFluent** is an AI-powered English speaking practice tool that helps users improve fluency, grammar, and confidence through real-time speech recognition and feedback.
+> **TalkFluent** is an AI-powered English speaking practice tool that helps users improve fluency, grammar, and confidence through real-time speech recognition and intelligent feedback.
+
+🌐 **Live Demo:** [https://talkfluent.tutorazzi.com](https://talkfluent.tutorazzi.com)
 
 ---
 
 ## 🚀 Features
 
-- 🎤 **Speech Recognition** – Talk naturally, get real-time transcriptions
-- 🧠 **AI-Powered Grammar Correction** – Smart feedback to improve your sentences
-- 🔁 **Interactive Speaking Exercises** – Practice with conversation prompts
-- 🔊 **Text-to-Speech** – Hear native-level pronunciation
-- 📊 **Progress Tracking** – Visualize growth in fluency and accuracy *(Coming soon)*
+- 🎤 **Speech Recognition** – Speak naturally and get real-time transcriptions
+- 🧠 **AI Grammar Feedback** – Corrects sentences with grammar-aware suggestions
+- 🔊 **Text-to-Speech** – Hear how sentences should sound natively
+- 💬 **Conversation Prompts** – Practice speaking with dynamic prompts
+- 📈 **Progress Insights** *(Coming soon)* – Fluency, accuracy & improvement tracking
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Frontend | Backend | AI & NLP | Others |
-|----------|---------|----------|--------|
-| React (Web) / React Native (Mobile) | Node.js, Express.js | OpenAI API / LanguageTool / Web Speech API | MongoDB, Firebase Auth, Cloud Storage |
+| Frontend | Backend | AI & NLP | Infrastructure |
+|----------|---------|----------|----------------|
+| React (Web App) | Node.js, Express.js | OpenAI API, Web Speech API | Docker, Docker Compose, NGINX |
+| HTML5 / CSS3 / JS | REST APIs | LanguageTool / Custom Grammar Rules | Firebase Auth, Cloud Storage |
 
 ---
 
 ## 📸 Screenshots
 
-> *[Add images here once available]*  
-Example:
-- Dashboard with AI feedback  
-- Practice session UI  
-- Pronunciation playback feature
+### 🏠 Homepage
+![Homepage](./screenshots/home.png)
 
----
+### 🎤 Speaking Practice
+![Speaking](./screenshots/speak.png)
 
-## 📦 Installation (Web)
+
+## 🐳 Dockerized Setup
+
+### 🧩 Prerequisites
+- Docker
+- Docker Compose
+
+### 🚀 Run the App
 
 ```bash
+# Clone the repository
 git clone https://github.com/fullstackabhi-Js/talkfluent.git
 cd talkfluent
-npm install
-npm start
+
+# Run Locally
+cd client && npm start
+cd service && node index.js
+
+# Build and run using Docker Compose
+docker-compose up --build
